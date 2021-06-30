@@ -610,6 +610,12 @@ class _DateTimePickerState extends FormFieldState<String> {
         }
       }
     }
+    
+    if (_effectiveController?.text != null && _effectiveController?.text == '') {
+      _effectiveController?.clear();
+      _dateLabelController.clear();
+      _timeLabelController.clear();
+    }
 
     if (_effectiveController?.text != null &&
         _effectiveController?.text != '') {
